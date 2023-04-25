@@ -15,8 +15,11 @@ def home():
 
 @app.route('/translate/', methods=['POST'])
 def translate():
-    request_data = request.get_json()
-    en_text = request_data['en_text']
+    print(request.form)
+    request_data = request.form #request.get_json()
+    print(request_data)
+    print(request_data['en_text'])
+    en_text = list(request_data['en_text'])
 
 
     tokenized = translate_tokenizer.prepare_seq2seq_batch(en_text, return_tensors="pt")["input_ids"]
