@@ -28,14 +28,16 @@ public class WikiAnswering extends HttpCodelet {
     public void proc() {
         if(reactivity.getEvaluation() == 0.0){
             String request = (String) reactivity.getI();
-            String response = " API request failed!";
+            String response = " API GET request failed!";
             if(request != null){
                 try{
                     response = this.sendGET(this.getURI +request);
                 }catch (IOException e){e.printStackTrace();}
+
+                reactivity.setI(null);
+                System.out.println(response);
             }
-            reactivity.setI(null);
-            System.out.println(response);
+
         }
 
 

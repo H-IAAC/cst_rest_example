@@ -34,18 +34,19 @@ public class GermanTranslator extends HttpCodelet {
     public void proc() {
         if(reactivity.getEvaluation() == 1.0){
             List request = (List) reactivity.getI();
-            String response = " API request failed!";
+            String response = " API POST request failed!";
             if(request != null){
                 String json = new Gson().toJson(request );
                 params.replace("en_text", json);
                 String paramsString = prepareParams(params);
-                System.out.println(paramsString);
+                //System.out.println(paramsString);
                 try{
                     response = this.sendPOST(this.postURI, paramsString);
                 }catch (IOException e){e.printStackTrace();}
+
+                reactivity.setI(null);
+                System.out.println(response);
             }
-            reactivity.setI(null);
-            System.out.println(response);
         }
     }
 }

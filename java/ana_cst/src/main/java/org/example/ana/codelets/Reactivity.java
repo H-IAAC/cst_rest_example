@@ -36,6 +36,7 @@ public class Reactivity extends Codelet {
                 reactivityMemory.setI(null);
             }
         }
+        else{reactivityMemory.setI(null);}
     }
 
     @Override

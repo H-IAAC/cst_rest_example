@@ -43,6 +43,7 @@ public class QASensory extends Codelet {
             sensoryMemory.setI(task);
             tasks.remove(0);
         }
+        else{sensoryMemory.setI(null);}
     }
 
     List<HashMap<String, Object>> getTasks(String pathToJson){
@@ -64,7 +65,7 @@ public class QASensory extends Codelet {
 
             // close reader
             reader.close();
-            System.out.println(tasks.size());
+            //System.out.println(tasks.size());
             return tasks;
 
         } catch (Exception ex) {

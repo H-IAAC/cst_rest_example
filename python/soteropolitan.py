@@ -15,10 +15,10 @@ def home():
 
 @app.route('/translate/', methods=['POST'])
 def translate():
-    print(request.form)
+    #print(request.form)
     request_data = request.form #request.get_json()
-    print(request_data)
-    print(request_data['en_text'])
+    #print(request_data)
+    #print(request_data['en_text'])
     en_text = list(request_data['en_text'])
 
 

@@ -15,9 +15,6 @@ public class Main {
         String apiURI = "http://127.0.0.1:5000";
         String pathToJson = "/home/wander/Projects/cst_pack/cst_rest_example/java/ana_cst/src/main/resources/tasks.json";
 
-        System.out.println("Hello world!");
-
-
 
         AnaMind anaMind = new AnaMind(apiURI, pathToJson);
         // start
