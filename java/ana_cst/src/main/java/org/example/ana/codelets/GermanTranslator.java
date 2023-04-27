@@ -41,7 +41,7 @@ public class GermanTranslator extends HttpCodelet {
                 String paramsString = prepareParams(params);
                 //System.out.println(paramsString);
                 try{
-                    response = this.sendPOST(this.postURI, paramsString);
+                    response = this.sendPOST(this.postURI, paramsString, "application/json");
                 }catch (IOException e){e.printStackTrace();}
 
                 reactivity.setI(null);
