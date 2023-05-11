@@ -22,7 +22,7 @@ After that, running the Java program will execute the proposed example.
 
 ### What is going on?
 
-Internally, the Sensory Codelet read the tasks.json file and passes the tasks one by one to the Reactivity Codelet as an entry in a HashMap. The Reactivity will then pass this info to either GermanTranslation on Wikipedia Codelet, according to the task. Those Codelets will make a GET or POST request - Wikipedia and GermanTranslator, respectively - and print the response given by the server in the terminal. The figure bellow illustrates the Agent's topology.
+Internally, the Sensory Codelet read the tasks.json file and passes the tasks one by one to the Reactivity Codelet as an entry in a HashMap. The Reactivity will then pass this info to either GermanTranslation on Wikipedia Codelet, according to the task. Those Codelets will make a GET or POST request - Wikipedia and GermanTranslator, respectively - and print the response given by the server in the terminal. The figure below illustrates the Agent's topology.
 
 
 ![ANA (Api Newbie Agent)](img/Ana.png)
