@@ -3,7 +3,7 @@
 This repo contains an example of the use of [CST](https://github.com/CST-Group/cst) REST API, integrating Python code on CST's Java implementation.
 
 
-The ANA (acronymous for Api Newbie Agent) will read a list of tasks in a JSON-formatted file (tasks.json) and will print either the English to German translation of a list of sentences or the 1000 first characters of a Wikipedia page's summary about a given subject.
+The ANA (acronymous for API Newbie Agent) will read a list of tasks in a JSON-formatted file (tasks.json) and will print either the English to German translation of a list of sentences or the 1000 first characters of a Wikipedia page's summary about a given subject.
  
  ## How it works
 
@@ -25,4 +25,4 @@ After that, running the Java program will execute the proposed example.
 Internally, the Sensory Codelet read the tasks.json file and passes the tasks one by one to the Reactivity Codelet as an entry in a HashMap. The Reactivity will then pass this info to either GermanTranslation on Wikipedia Codelet, according to the task. Those Codelets will make a GET or POST request - Wikipedia and GermanTranslator, respectively - and print the response given by the server in the terminal. The figure below illustrates the Agent's topology.
 
 
-![ANA (Api Newbie Agent)](img/Ana.png)
+![ANA (API Newbie Agent)](img/Ana.png)
